@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="/stylesheets/style.css")
+    body
+        div.joinroom
+            h1 部屋を作成しました。他の人を招待するには、ルームIDとパスワードを教えてください。
+            h3 ルームID
+            h3=roomid
+            h3 パスワード
+            h3=pass
+            a(href=("/images/room.html?room_id=" + ROOMID))
+                h2 入室
+        h1.Toppage-Title
+            |WeBrain

@@ -1,0 +1,30 @@
+link(rel="stylesheet", href="/stylesheets/style.css")
+div
+  h1.Toppage-Title
+    |WeBrain
+  p.Toppage-Use
+    |WeBrainは、オンラインルームで意見を見やすく共有できるチャットアプリです。
+    br
+    |ルームIDとパスワードを入力すると、メンバーと同じ部屋に入ることができます。
+    br
+    |ブレインストーミングのちょっとしたメモアプリとしてご利用ください。
+    br
+    strong
+      |メールアドレスなどのユーザー登録は不要です。
+      br
+      |※個人を特定できるような内容の投稿、公序良俗に反する投稿はお控えください。
+div.Toppage-Join
+  h2 ルームIDとパスワードで入室する
+  form(method="POST" action="./")
+    input(type='text', name="roomid", class="Toppage-Pass", maxlength="8", minlength="8", placeholder="ルームID" required)
+    input(type="password", name="key", class="Toppage-Pass", maxlength="8", minlength="8", placeholder="パスワード" required)
+    input(type="submit", value="参加", class="Toppage-Button")
+  h3=ERROR
+div.Toppage-Create
+  p 
+    |新規作成はこちら
+    br
+    |（新規のIDとパスワードが発行されます）
+  form(method="POST" action="./newroom")
+    input(type="submit", value="新規作成", class="Toppage-Button")
+    

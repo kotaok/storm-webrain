@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WeBrain</title>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+    <script src="../javascripts/escape.js"></script>
+    <script src="../javascripts/param.js"></script>
+    <script src="../javascripts/count.js"></script>
+    <script src="../javascripts/firebase-config.js"></script>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <script src="../javascripts/Sortable-master/Sortable.min.js"></script>
+</head>
+<body>
+    <h1 id="title">WeBrain</h1>
+    <h4>メニュー:</h4>
+    <a href="/" class="room_button"><h4>トップに戻る(チャットは残ります)</h4></a>
+    <a onclick="RemoveData()" class="room_button"><h4>全て削除</h4></a>
+    <a onclick="Reload()" id="room_reload" class="room_button"><h4>再読み込み</h4></a>
+    <h4>ヘルプ:</h4>
+    <h4 id="alert_ms">メッセージは自動で更新されます。もし表示されない場合は再読み込みしてください。<br>
+        招待の際はURLを共有しても入室できます。<br>
+        メッセージをドラッグ&ドロップすると入れ替えられます。並び順は自分の画面にのみ反映されます。<br>
+        メッセージを残したくない時は退出前に削除してください。</h4>
+    <div id="canvas" class="movable_rel">
+    </div>
+    <div id="send">
+        <li><textarea type="text" id="send-text" onkeyup="countStr();" maxlength="69" rows="2" cols="15" placeholder="69文字まで送信可能"></textarea></li>
+        <li id="strlength">0</li>
+        <a onclick="AddData()"><li id="send-button">送信</li></a>
+    </div>
+    <script src="../javascripts/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+    <script src="../javascripts/firebase-users.js"></script>
+    <script src="../javascripts/Sortable.js"></script>
+</body>
+</html>
