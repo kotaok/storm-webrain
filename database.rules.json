@@ -1,0 +1,22 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+      
+    "users": {
+  		".read": false,
+    	".write": "auth.uid !== null"
+    },
+    "messages": {
+      ".write": "auth !== null",
+      "$roomId": {
+        ".read": "root.child('users/'+ auth.uid +'/rooms/'+$roomId).exists()",
+      	".write": "root.child('users/'+ auth.uid +'/rooms/'+$roomId).exists()"
+    	}
+  	},
+    "rooms": {
+      ".read": false,
+      ".write": false
+    }
+	}
+}

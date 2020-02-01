@@ -65,7 +65,7 @@ node_modules/
 .env
 
 #firebase設定は非公開
-service-account-file.json
-database.rules.json
-firebase.json
+# service-account-file.json
+# database.rules.json
+# firebase.json
 
