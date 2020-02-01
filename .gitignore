@@ -69,5 +69,3 @@ service-account-file.json
 database.rules.json
 firebase.json
 
-package.json
-package.lock.json
