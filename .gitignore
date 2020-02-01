@@ -68,6 +68,6 @@ node_modules/
 service-account-file.json
 database.rules.json
 firebase.json
-.firebaserc
+.firebasercg
 package-lock.json
 yarn.lock
